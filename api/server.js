@@ -1,7 +1,15 @@
-const express = require("express")
+const express = require("express");
 
-const server = express()
+const server = express();
 
-// DO YOUR MAGIC
+server.use(express.json());
 
-module.exports = server
+server.use("/api/cars");
+
+server.get("/", (req, res) => {
+  res.status(200).json({
+    api: "Up and running",
+  });
+});
+
+module.exports = server;
