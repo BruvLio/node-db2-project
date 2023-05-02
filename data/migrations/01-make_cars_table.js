@@ -1,17 +1,17 @@
 exports.up = async function (knex) {
   // DO YOUR MAGIC
-  await knex.schema.createTable("Cars", (table) => {
-    table.increments("Car_id");
-    table.string("Vin_Number").notNullable().unique();
-    table.string("Car_Make").notNullable();
-    table.string("Car_Model").notNullable();
-    table.integer("Mileage").unsigned().notNullable();
-    table.string("Title");
-    table.string("Transmission_Type");
+  await knex.schema.createTable("cars", (table) => {
+    table.increments("id");
+    table.string("vin").notNullable().unique();
+    table.string("make").notNullable();
+    table.string("model").notNullable();
+    table.integer("mileage").unsigned().notNullable();
+    table.string("title");
+    table.string("transmission");
   });
 };
 
 exports.down = async function (knex) {
   // DO YOUR MAGIC
-  await knex.schema.dropTableIfExists("Cars");
+  await knex.schema.dropTableIfExists("cars");
 };

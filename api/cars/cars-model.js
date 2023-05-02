@@ -3,25 +3,26 @@ const db = require("../../data/db-config");
 const getAll = async () => {
   // DO YOUR MAGIC
 
-  const result = await db("Cars");
+  const result = await db("cars");
   return result;
 };
 
-const getById = async (Car_id) => {
+const getById = async (id) => {
   // DO YOUR MAGIC
 
-  const result = await db("Cars").where("Car_id", Car_id).first();
+  // const result = await db("cars").where("id", id).first();
+  const result = await db("cars").where({ id }).first();
   return result;
 };
 
 const getByVin = async (vin) => {
-  return db("Cars").where("Vin_Number", vin).first();
+  return db("cars").where("vin", vin).first();
 };
 
 const create = async (car) => {
   // DO YOUR MAGIC
 
-  const [Car_id] = await db("Cars").insert(car);
+  const [Car_id] = await db("cars").insert(car);
   const result = await getById(Car_id);
   return result;
 

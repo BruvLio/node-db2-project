@@ -4,23 +4,31 @@
  */
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
-  await knex("Cars").truncate();
-  await knex("Cars").insert([
+  await knex("cars").truncate();
+  await knex("cars").insert([
     {
-      Vin_Number: "1N6SD16S8NC343640",
-      Car_Make: "BMW",
-      Car_Model: "Series3",
-      Mileage: "90000",
-      Title: "owned",
-      Transmission_Type: "Manual",
+      vin: "1N6SD16S8NC343640",
+      make: "BMW",
+      model: "Series3",
+      mileage: "90000",
+      title: "clean",
+      transmission: "Manual",
     },
     {
-      Vin_Number: "4T1BE32K85U528911",
-      Car_Make: "Mercedes",
-      Car_Model: "Cla",
-      Mileage: "340",
-      Title: "leased",
-      Transmission_Type: "automatic",
+      vin: "4T1BE32K85U528911",
+      make: "Mercedes",
+      model: "Cla",
+      mileage: "340",
+      title: "clean",
+      transmission: "automatic",
+    },
+    {
+      vin: "JH4DB7550SS005262",
+      make: "Ford",
+      model: "Focus",
+      mileage: "10000",
+      title: "salvage",
+      transmission: "automatic",
     },
   ]);
 };

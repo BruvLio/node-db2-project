@@ -20,6 +20,7 @@ router.get("/", async (req, res, next) => {
 });
 
 router.get("/:id", checkCarId, async (req, res, next) => {
+  // eslint-disable-line
   res.json(req.car);
 });
 
