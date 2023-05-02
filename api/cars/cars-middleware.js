@@ -14,7 +14,7 @@ const checkCarId = async (req, res, next) => {
 const checkCarPayload = async (req, res, next) => {
   // DO YOUR MAGIC
   if (!req.body.Vin_Number) {
-    next({ status: 400, message: "<field name> is missing" });
+    next({ status: 400, message: `"${} is missing"` });
   } else {
     next();
   }
