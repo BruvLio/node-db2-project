@@ -13,4 +13,22 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.get("/:id", async (req, res, next) => {
+  try {
+    const car = await Cars.getById(req.params.id);
+    res.json(car);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post("/:id", async (req, res, next) => {
+  try {
+    const car = await Cars.create(req.body);
+    res.status(201).json(car);
+  } catch (err) {
+    next(err);
+  }
+});
+
 module.exports = router;
