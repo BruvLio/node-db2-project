@@ -4,8 +4,8 @@
  */
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
-  await knex("table_name").truncate();
-  await knex("table_name").insert([
+  await knex("Cars").truncate();
+  await knex("Cars").insert([
     { colName: "rowValue1" },
     { colName: "rowValue2" },
     { colName: "rowValue3" },
