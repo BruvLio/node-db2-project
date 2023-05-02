@@ -1,15 +1,24 @@
-const checkCarId = (req, res, next) => {
-  // DO YOUR MAGIC
-}
+const db = require("../../data/db-config");
 
-const checkCarPayload = (req, res, next) => {
+const checkCarId = async (req, res, next) => {
   // DO YOUR MAGIC
-}
+};
 
-const checkVinNumberValid = (req, res, next) => {
+const checkCarPayload = async (req, res, next) => {
   // DO YOUR MAGIC
-}
+};
 
-const checkVinNumberUnique = (req, res, next) => {
+const checkVinNumberValid = async (req, res, next) => {
   // DO YOUR MAGIC
-}
+};
+
+const checkVinNumberUnique = async (req, res, next) => {
+  // DO YOUR MAGIC
+};
+
+module.exports = {
+  checkCarId,
+  checkCarPayload,
+  checkVinNumberUnique,
+  checkVinNumberValid,
+};

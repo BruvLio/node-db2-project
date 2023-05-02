@@ -1,12 +1,12 @@
-const getAll = () => {
+const getAll = async () => {
   // DO YOUR MAGIC
 };
 
-const getById = () => {
+const getById = async () => {
   // DO YOUR MAGIC
 };
 
-const create = () => {
+const create = async () => {
   // DO YOUR MAGIC
 };
 
