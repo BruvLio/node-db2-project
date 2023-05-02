@@ -5,7 +5,7 @@ exports.up = async function (knex) {
     table.string("Vin_Number").notNullable().unique();
     table.string("Car_Make").notNullable();
     table.string("Car_Model").notNullable();
-    table.integer("Mileage").notNullable();
+    table.integer("Mileage").unsigned().notNullable();
     table.string("Title");
     table.string("Transmission_Type");
   });
