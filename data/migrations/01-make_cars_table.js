@@ -7,7 +7,7 @@ exports.up = async function (knex) {
     table.string("Car_Model").notNullable();
     table.integer("Mileage").notNullable();
     table.string("Title");
-    table.string("Transmission");
+    table.string("Transmission_Type");
   });
 };
 
